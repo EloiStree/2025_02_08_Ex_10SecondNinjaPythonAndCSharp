@@ -198,48 +198,12 @@ class ProcessLevels:
         the_ninja.tap_shuriken()
         the_ninja.wait_for_seconds(3)
         
-    def your_code_for_level_1(the_ninja:Ninja):
-        """
-        Add your code here to make less that 2 secconds in level 1.
-        """
-        pass
+        
+
+if __name__ == "__main__":
+    ninja_name= "Marcel"
+    print("Hello Ninja ", ninja_name)
+    ########### ADD YOUR CODE HERE ###########
     
-    def your_code_for_level_2(the_ninja:Ninja):
-        """
-        Add your code here to make less that 2 secconds in level 2.
-        """
-        pass
-    def your_code_for_level_3(the_ninja:Ninja):
-        """
-        Add your code here to make less that 2 secconds in level 2.
-        """
-        pass
-        
-while True:
-    game_mode = "SPEED"
-    game_mode = "LEVELS"
-    game_mode = "DEMO"
-    if game_mode == "DEMO":
-        print("DEMO MODE")
-        while True:
-            ProcessLevels.process_level_one(player)
-        
-    elif game_mode == "LEVELS":
-        print("DEMO MODE")
-        ProcessLevels.your_code_for_level_1(player)
-        player.tap_continue()
-        player.wait_for_milliseconds(1000)
-        ProcessLevels.your_code_for_level_2(player)
-        player.tap_continue()
-        player.wait_for_milliseconds(1000)
-        ProcessLevels.your_code_for_level_3(player)
-        
-    elif game_mode == "SPEED":
-        
-        print("DEMO MODE")
-        while True:
-            player.tap_restart()
-            player.wait_for_milliseconds(300)
-            ProcessLevels.your_code_for_level_1(player)
             
         
