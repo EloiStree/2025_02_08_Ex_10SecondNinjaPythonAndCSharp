@@ -41,21 +41,6 @@ public class ProcessLevels
         theNinja.TapShuriken();
         theNinja.WaitForSeconds(3);
     }
-
-    public static void YourCodeForLevel1(Ninja theNinja)
-    {
-        // Add your code here to make less than 2 seconds in level 1.
-    }
-
-    public static void YourCodeForLevel2(Ninja theNinja)
-    {
-        // Add your code here to make less than 2 seconds in level 2.
-    }
-
-    public static void YourCodeForLevel3(Ninja theNinja)
-    {
-        // Add your code here to make less than 2 seconds in level 3.
-    }
 }
 
 public class Program
@@ -67,43 +52,48 @@ public class Program
         int targetPlayerIndex = 1;
         Ninja player = new Ninja(targetAddress, targetPort, targetPlayerIndex, "Marcel");
 
-        string gameMode = "DEMO";  // Change this to "LEVELS" or "DEMO" as needed
+        //A solution to the level 1 that is not optimized
+        //ProcessLevels.ProcessLevelOne(player);
 
         while (true)
         {
-            switch (gameMode)
-            {
-                case "DEMO":
-                    Console.WriteLine("DEMO MODE");
-                    while (true)
-                    {
-                        ProcessLevels.ProcessLevelOne(player);
-                    }
+            // Restart the level
+            player.TapRestart();
+            player.TapShuriken();
 
-                case "LEVELS":
-                    Console.WriteLine("LEVELS MODE");
-                    ProcessLevels.YourCodeForLevel1(player);
-                    player.TapContinue();
-                    player.WaitForMilliseconds(1000);
-                    ProcessLevels.YourCodeForLevel2(player);
-                    player.TapContinue();
-                    player.WaitForMilliseconds(1000);
-                    ProcessLevels.YourCodeForLevel3(player);
-                    break;
+            // Move right and wait
+            player.StartMoveRight();
+            player.WaitForSeconds(0.35);
+            player.StopMoveRight();
+            player.WaitForSeconds(0.1);
 
-                case "SPEED":
-                    Console.WriteLine("SPEED MODE");
-                    while (true)
-                    {
-                        player.TapRestart();
-                        player.WaitForMilliseconds(300);
-                        ProcessLevels.YourCodeForLevel1(player);
-                    }
+            // Jump and move left
+            player.StartJump();
+            player.StartMoveLeft();
+            player.WaitForSeconds(0.5);
+            player.StopJump();
+            player.StopMoveLeft();
+            player.WaitForSeconds(0.1);
 
-                default:
-                    Console.WriteLine("Unknown game mode.");
-                    break;
-            }
+            // Jump, move left, and use sword
+            player.StartJump();
+            player.StartMoveLeft();
+            player.StartSword();
+            player.WaitForSeconds(0.5);
+            player.StopSword();
+            player.StopJump();
+            player.StopMoveLeft();
+            player.WaitForSeconds(0.2);
+
+            // Move right and jump twice
+            player.StartMoveRight();
+            player.TapJump();
+            player.TapJump();
+            player.StopMoveRight();
+
+            // Use shuriken and wait
+            player.TapShuriken();
+            player.WaitForSeconds(3);
         }
     }
 }
