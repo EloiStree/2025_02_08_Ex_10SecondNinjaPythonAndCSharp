@@ -249,7 +249,7 @@ Maintenant, il faut dire à quelle application on envoie le message. Pour ça, o
 C’est une sorte de porte ouverte.  
 `application_port = 7073`  
   
-Comment, quand on joue à plusieurs sur le même écran, il faut choisir un index :  
+Comme, quand on joue à plusieurs sur le même écran, il faut choisir un index :  
 `player_index = 1` # 0 = tout, 12 est la douzième fenêtre  
   
 Parfait, on a ce qu’il nous faut.  
