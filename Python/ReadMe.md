@@ -249,7 +249,7 @@ Maintenant, il faut dire à quelle application on envoie le message. Pour ça, o
 C’est une sorte de porte ouverte.  
 `application_port = 7073`  
   
-Comment, quand on joue à plusieurs sur le même écran, il faut choisir un index :  
+Comme, quand on joue à plusieurs sur le même écran, il faut choisir un index :  
 `player_index = 1` # 0 = tout, 12 est la douzième fenêtre  
   
 Parfait, on a ce qu’il nous faut.  
@@ -359,4 +359,14 @@ Que le code et les shurikens soient avec vous !
   
 On se revoit dans l'exercice suivant sur C#    
 Le même que celui-ci, mais sous Visual Studio Community 2022.  
+
+
+--------------
+
+Je devrais vous apprendre à utiliser les boucles *for* et *foreach* ^^. Mais pour bien saisir l'intérêt des classes et des outils offerts par Python et C#, il faut d'abord apprendre à écrire du code peu élégant.
+
+C'est le moment d'aller demander à ChatGPT et Google ce que c'est ^^.  
+Petite technique : demande-lui un cheatsheet des boucles for et foreach. 🤖🧙‍♂️  
+- https://chatgpt.com  
+- https://www.deepseek.com  
 
