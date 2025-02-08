@@ -360,3 +360,13 @@ Que le code et les shurikens soient avec vous !
 On se revoit dans l'exercice suivant sur C#    
 Le même que celui-ci, mais sous Visual Studio Community 2022.  
 
+
+--------------
+
+Je devrais vous apprendre à utiliser les boucles *for* et *foreach* ^^. Mais pour bien saisir l'intérêt des classes et des outils offerts par Python et C#, il faut d'abord apprendre à écrire du code peu élégant.
+
+C'est le moment d'aller demander à ChatGPT et Google ce que c'est ^^.  
+Petite technique : demande-lui un cheatsheet des boucles for et foreach. 🤖🧙‍♂️  
+- https://chatgpt.com  
+- https://www.deepseek.com  
+
